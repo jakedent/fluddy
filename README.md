@@ -6,6 +6,8 @@
 	  <img src="https://img.shields.io/badge/pypi-0.0.1-blue" />
 	 <img src="https://img.shields.io/badge/downloads-1%2F%20month-brightgreen" />
 	  <img src=" https://img.shields.io/badge/Compatibility-MacOS%20%7C%20Windows%20%7C%20Linux-lightgrey" />
+	  
+	  
   </p>
 </div>
 
