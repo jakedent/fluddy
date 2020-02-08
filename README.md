@@ -49,7 +49,9 @@ Available via pip or local install.
 ```
 pip install fluddy
 ```
-* Download and `cd` to flask-buddy
+* Create a directory called flask-buddy.
+* Change to flask-buddy dir and download fluddy repo.
+* Run the following command once fluddy has been downloaded:
 
 ```
 pip install .
@@ -119,7 +121,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-[Jacob Dent](https://fairlynormalpeople.com) - info@jacobdent.com
+[Jacob Dent] - info@jacobdent.com
 
 [https://github.com/jakedent/fluddy](https://github.com/jakedent/fluddy)
 
