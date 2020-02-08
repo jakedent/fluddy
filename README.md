@@ -53,9 +53,9 @@ Available via pip or local install.
 ```
 pip install fluddy
 ```
-* Create a directory called flask-buddy.
-* Change to flask-buddy dir and download fluddy repo.
-* Run the following command once fluddy has been downloaded:
+* Download fluddy repo.
+* Change to fluddy dir.
+* Run the following command:
 
 ```
 pip install .
