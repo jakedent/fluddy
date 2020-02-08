@@ -98,11 +98,19 @@ def main():
 
     if pargs.update:
         if pargs.update[0] in flask_bin:
-            subprocess.call('{}'.format(flask_bin[(pargs.update[0])]) + SetOS().path_var + 'venv'
-                            + SetOS().path_var + 'bin' + SetOS().path_var + 'pip '
-                            'install -r ' + flask_bin[(pargs.update[0])] + SetOS().path_var + 'requirements.txt',
-                            shell=True)
-            print("fluddy: Successfully updated {}!".format(pargs.update[0]))
+            if sys.platform == 'win32':
+                subprocess.call('{}'.format(flask_bin[(pargs.update[0])]) + SetOS().path_var + 'venv'
+                                + SetOS().path_var + 'Scripts' + SetOS().path_var + 'pip '
+                                                                                'install -r ' + flask_bin[
+                                    (pargs.update[0])] + SetOS().path_var + 'requirements.txt',
+                                shell=True)
+                print("fluddy: Successfully updated {}!".format(pargs.update[0]))
+            else:
+                subprocess.call('{}'.format(flask_bin[(pargs.update[0])]) + SetOS().path_var + 'venv'
+                                + SetOS().path_var + 'bin' + SetOS().path_var + 'pip '
+                                'install -r ' + flask_bin[(pargs.update[0])] + SetOS().path_var + 'requirements.txt',
+                                shell=True)
+                print("fluddy: Successfully updated {}!".format(pargs.update[0]))
         else:
             print("fluddy error: Could not find Flask App to update.")
 
