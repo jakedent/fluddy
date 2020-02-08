@@ -8,7 +8,9 @@
 	  <img src=" https://img.shields.io/badge/Compatibility-MacOS%20%7C%20Windows%20%7C%20Linux-lightgrey" />
   </p>
 </div>
+
 # fluddy
+
 *fluddy* is an effective, lightweight and dependency-free command-line utility for managing, launching, updating and creating Flask Apps.
 
 
