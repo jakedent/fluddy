@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # noreorder
 __title__ = 'fluddy'
-__version__ = '0.0.1'
+__version__ = '0.0.2'
 __author__ = 'Jacob Dent'
 __license__ = 'MIT License'
 __copyright__ = 'Copyright 2020 Jacob Dent'
@@ -18,7 +18,7 @@ __ascii__ = r"""
   #       #    #  ##  #  ##  #  ##   ## # 
   #      ###    ## #   ## #   ## #      # 
                                     #   # 
-  Version 0.0.1                      ### 
+  Version 0.0.2                      ### 
 
 """
 __windows_ascii__ = r"""
@@ -33,7 +33,7 @@ echo #       #    #   #  #   #  #   #  #  ##
 echo #       #    #  ##  #  ##  #  ##   ## # 
 echo #      ###    ## #   ## #   ## #      # 
 echo                                    #   # 
-echo Version 0.0.1                      ### 
+echo Version 0.0.2                       ### 
 
 
 """
