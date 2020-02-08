@@ -8,8 +8,11 @@
 	  <img src=" https://img.shields.io/badge/Compatibility-MacOS%20%7C%20Windows%20%7C%20Linux-lightgrey" />
 	  
 	  
+	  
   </p>
+  
 </div>
+
 
 # fluddy
 
