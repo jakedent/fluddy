@@ -121,7 +121,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-[Jacob Dent] - info@jacobdent.com
+Jacob Dent - info@jacobdent.com
 
 [https://github.com/jakedent/fluddy](https://github.com/jakedent/fluddy)
 
