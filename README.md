@@ -1,8 +1,9 @@
 <div align="center">
   <img src="art/fluddy.png" width="250" height="250" alt="pytube logo" />
   <p align="center">
-	  <img src="https://img.shields.io/badge/python-3.5%2B-blue" alt="python-version">
+	  <img src="https://img.shields.io/badge/python-3.5%2B-blue" />
 	  <img src="https://img.shields.io/badge/pypi-0.0.2-blue" />
+	    <img src="https://img.shields.io/badge/Build-stable-brightgreen" />
 	 <img src="https://img.shields.io/badge/downloads-1%2F%20month-brightgreen" />
 	  <img src="https://img.shields.io/badge/Compatibility-MacOS.%20Windows.%20Linux.-lightgrey" />
 	  
