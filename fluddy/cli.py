@@ -35,33 +35,42 @@ logger = logging.getLogger(__name__)
 def main():
     global pargs
     parser = argparse.ArgumentParser(prog='fluddy',
-                                     usage='%(prog)s [projectName] [--add] [--create] [--update] [--list] [--remove] '
-                                           '[--version] ' '[-h]',
+                                     usage='%(prog)s [projectName] [-a] [-c] [-u] [-ls] [-r] [-v] [-h]',
                                      description='Flask Buddy - simple Flask management.',
+                                     formatter_class=argparse.RawTextHelpFormatter,
                                      epilog='https://github.com/jakedent/fluddy')
-
+    for pat in parser._action_groups:
+        try:
+            if pat.title == 'positional arguments':
+                pat.title = 'Launcher'
+        except AttributeError:
+            continue
+    for oat in parser._action_groups:
+        try:
+            if oat.title == 'optional arguments':
+                oat.title = 'More arguments'
+        except AttributeError:
+            continue
     parser.add_argument('-a', '--add',
-                        metavar='',
+                        metavar='\b',
                         type=str,
                         nargs=2,
-                        help='Add Flask App. fluddy --add [name] [path]')
+                        help='\tAdd Flask App. fluddy --add [name] [path]')
     parser.add_argument('-c', '--create',
-                        metavar='',
+                        metavar='\b',
                         type=str,
                         nargs=2,
-                        help='Create Flask App. fluddy --create [name] [path]')
-    parser.add_argument('-u',
-                        '--update',
-                        metavar='',
+                        help='\tCreate Flask App. fluddy --create [name] [path]')
+    parser.add_argument('-u', '--update',
+                        metavar='\b',
                         type=str,
-                        nargs=1,
-                        help='Update Flask App: fluddy --update [name]')
-    parser.add_argument('-r',
-                        '--remove',
-                        metavar='',
+                        nargs=1,  # required for gathering Flask App name.
+                        help='\tUpdate Flask App: fluddy --update [name]')
+    parser.add_argument('-r', '--remove',
+                        metavar='\b',
                         type=str,
-                        nargs=1,
-                        help='Remove Flask App (from fluddy): fluddy --remove [name]')
+                        nargs=1,  # required for gathering Flask App name.
+                        help='\tRemove Flask App (from fluddy): fluddy --remove [name]')
     parser.add_argument('-ls', '--list',
                         action='store_true',
                         help='List Flask Apps and exit')
@@ -104,7 +113,6 @@ def main():
                                                                                 'install -r ' + flask_bin[
                                     (pargs.update[0])] + SetOS().path_var + 'requirements.txt',
                                 shell=True)
-                print("fluddy: Successfully updated {}!".format(pargs.update[0]))
             else:
                 subprocess.call('{}'.format(flask_bin[(pargs.update[0])]) + SetOS().path_var + 'venv'
                                 + SetOS().path_var + 'bin' + SetOS().path_var + 'pip '
