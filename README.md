@@ -98,7 +98,7 @@ fluddy --remove projectName
 </div>
 <!-- ROADMAP -->
 
-## Roadmap
+## Issues
 
 See [open issues](https://github.com/jakedent/fluddy/issues) for a proposed list of features (and 🐞's).
 
