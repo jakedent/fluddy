@@ -91,11 +91,10 @@ Remove a Flask App from fluddy:
 fluddy --remove projectName
 ```
 
-Below is a demo of fluddy version 0.0.2:
 
 <div align="center">
 <br>
- <img src="art/fluddy-demo.gif" alt="pytube logo" />
+ <img src="art/fluddy-demo-min.gif" alt="pytube logo" />
 </div>
 <!-- ROADMAP -->
 
