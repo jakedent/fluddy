@@ -10,7 +10,7 @@ initialize_flask_buddy()
 
 setuptools.setup(
     name='fluddy',
-    version='0.0.2',
+    version='0.0.3',
     author='Jacob Dent',
     author_email='info@jacobdent.com',
     packages=find_packages(),
