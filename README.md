@@ -98,6 +98,7 @@ fluddy --remove projectName
  <img src="art/fluddy-demo.gif" alt="pytube logo" />
 </div>
 <!-- ROADMAP -->
+
 ## Roadmap
 
 See [open issues](https://github.com/jakedent/fluddy/issues) for a proposed list of features (and 🐞's).
