@@ -94,7 +94,7 @@ fluddy --remove projectName
 
 <div align="center">
 <br>
- <img src="art/fluddy-demo-min2.gif" alt="pytube logo" />
+ <img src="art/fluddy-demo-min-2.gif" alt="pytube logo" />
 </div>
 <!-- ROADMAP -->
 
