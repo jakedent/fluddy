@@ -83,7 +83,7 @@ fluddy --create projectName /exact/path/to/save/dir
 Create a Flask App from template / skeleton (coming v0.0.4):
 
 ```
-fluddy --create projectName /exact/path/to/save/dir --skel /exact/path/to/template/skeleton
+fluddy --create-skel projectName /exact/path/to/save/dir /exact/path/to/template/skeleton
 ```
 Update a Flask App (venv):
 
