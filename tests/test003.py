@@ -1,4 +1,4 @@
-# working beta
+# Monolithic launch
 import subprocess
 from config import flask_bin
 import os
