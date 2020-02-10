@@ -1,4 +1,4 @@
-# connect to next available port after 5000 (if 5000 is not free)
+# test defualt flask port (assign if)
 import socket, errno
 
 
