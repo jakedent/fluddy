@@ -1,5 +1,4 @@
-'''
-# create flask project, initialize env
+# Monolithic create Flask and Venv
 import subprocess
 import os
 import stat
@@ -88,4 +87,3 @@ def finish_setup():
 
 if __name__ == '__main__':
     create_flask()
-'''
