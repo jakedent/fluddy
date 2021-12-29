@@ -13,7 +13,6 @@ logger = logging.getLogger(__name__)
 
 def initialize_flask_buddy():
     from fluddy import SetOS
-    global env_command_dir
     save_dir = os.path.expanduser("~")
     env_command_dir = os.path.join(save_dir + SetOS().path_var + 'fluddy', 'buds' + SetOS().path_var)
     fbin_loc = os.path.join(save_dir + SetOS().path_var + 'fluddy' + SetOS().path_var)
