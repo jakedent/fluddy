@@ -47,12 +47,7 @@ Flask Buddy (fluddy) allows developers to launch and update their individual Fla
 Available via pip or local install.
 
 ### Installation
- 
-* Pip installation
 
-```
-pip install fluddy
-```
 * Download fluddy repo.
 * Change to fluddy dir.
 * Run the following command:
