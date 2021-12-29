@@ -33,7 +33,6 @@ logger = logging.getLogger(__name__)
 
 
 def main():
-    global pargs
     parser = argparse.ArgumentParser(prog='fluddy',
                                      usage='%(prog)s [projectName] [-a] [-c] [-u] [-ls] [-r] [-v] [-h]',
                                      description='Flask Buddy - simple Flask management.',
