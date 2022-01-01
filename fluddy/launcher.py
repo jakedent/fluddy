@@ -34,16 +34,13 @@ logger = logging.getLogger(__name__)
 
 def initialise_project(*args):
     # get Flask App name to launch and start launch process.
-    global user_input_name
     user_input_name = str([args[0]]).strip('[]').strip("''")
-    generate_launch_file()  # start launch process
+    generate_launch_file(user_input_name)  # start launch process
 
 
-def generate_launch_file():
-    global env, start_venv
+def generate_launch_file(user_input_name):
     print("fluddy: Configuring launch file...")
     env_file = user_input_name + SetOS().env_ext  # set .command or .bat
-
     try:
         env = open(SetOS().env_file_loc + env_file, 'w+')  # make launch file (.command/.bat/.sh)
     except IOError:
@@ -54,7 +51,7 @@ def generate_launch_file():
         if sys.platform == 'darwin':
             start_venv = 'source ' + '{}'.format(flask_bin[user_input_name]) + SetOS().path_var + 'venv' + \
                          SetOS().path_var + 'bin' + SetOS().path_var + 'activate'
-            mac_launch()
+            mac_launch(env, start_venv)
             print("fluddy: Launch file configured with permissions.")
             # launch on MacOS
             try:
@@ -68,7 +65,7 @@ def generate_launch_file():
         elif sys.platform == 'linux' or sys.platform == 'linux2':
             start_venv = '. ' + '{}'.format(flask_bin[user_input_name]) + SetOS().path_var + 'venv' + \
                          SetOS().path_var + 'bin' + SetOS().path_var + 'activate'
-            lin_launch()
+            lin_launch(env, start_venv)
             print("fluddy: Launch file configured with permissions.")
             # launch on Linux
             try:
@@ -82,7 +79,7 @@ def generate_launch_file():
         elif sys.platform == 'win32' or sys.platform == 'win64':
             start_venv = '{}'.format(flask_bin[user_input_name]) + SetOS().path_var + 'venv' + SetOS().path_var + 'Scripts' + \
                          SetOS().path_var + 'activate'
-            win_launch()
+            win_launch(env, start_venv)
             print("fluddy: Launch file configured.")
             # launch on Windows
             try:
@@ -103,7 +100,7 @@ def generate_launch_file():
 
 
 # write .command files and set permissions.
-def mac_launch():
+def mac_launch(env, start_venv):
     #  update .command
     env.write('echo "{}"'.format(__ascii__) + '\n' + 'cd ' + '{}\n'.format(flask_bin[user_input_name]) +
               start_venv + "\nflask run --port " '{}\n'.format(FlaskPort().port))
@@ -115,7 +112,7 @@ def mac_launch():
 
 
 # write .bat files.
-def win_launch():
+def win_launch(env, start_venv):
     env.write('echo {}'.format(__windows_ascii__) + '\n' +
               'cd ' + '{}\n'.format(flask_bin[user_input_name]) +
               'call ' + start_venv + "\nflask run --port " '{}\n'.format(FlaskPort().port) + '\n' +
@@ -124,7 +121,7 @@ def win_launch():
 
 
 # write .sh files and set permissions.
-def lin_launch():
+def lin_launch(env, start_venv):
     #  update .command or file
     env.write('echo "{}"'.format(__ascii__) + '\n' + 'cd ' + '{}\n'.format(flask_bin[user_input_name]) +
               start_venv + "\nflask run --port " '{}\n'.format(FlaskPort().port))
@@ -136,7 +133,3 @@ def lin_launch():
 
 if __name__ == '__main__':
     initialise_project()
-    mac_launch()
-    win_launch()
-    lin_launch()
-
